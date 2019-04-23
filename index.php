@@ -2,7 +2,7 @@
   $curl = curl_init();
   curl_setopt_array($curl, [
     CURLOPT_RETURNTRANSFER => 1,
-    CURLOPT_URL => 'http://localhost/database/server.php',
+    CURLOPT_URL => 'http://10.33.34.121/read.php',
     CURLOPT_POST => 1
     // CURLOPT_POSTFIELDS => [
     //   'key' => '1234',
@@ -34,14 +34,12 @@
 
   <tbody>
     <?php foreach ($result as $i) :?>
-    <tr id=<?=$i->id?>>
-        <th scope="row"><?=$i->id?></th>
-          <td><?=$i->email?></td>
-          <td><?=$i->password?></td>
+    <tr id=<?=$i->nim?>>
+        <th scope="row"><?=$i->nim?></th>
+          <td><?=$i->nama?></td>
+          <td><?=$i->ip?></td>
           <form action="delete.php">
-          <input type="hidden" name="id" value=<?=$i->id?>>
-            <td><input type="submit" value="HAPUS" class="btn btn-danger"></td>
-          </form>
+            <td><a href="client_delete.php?nim=<?=$i->nim?>" class="btn btn-danger">HAPUS</a></td>
       </tr>
     <?php endforeach?>
   </tbody>

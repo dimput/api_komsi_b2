@@ -9,16 +9,36 @@
 </head>
 <body>
     <div class="container">
-    <form action="http://localhost/database/server.php" method="POST" name="myForm">
+    <form action="http://10.33.34.121/create.php" id="myForm" method="POST" name="myForm">
     <div class="form-group">
-        <label for="first_name">First Name</label>
-        <input type="text" class="form-control" id="first_name" placeholder="First Name">
+        <label for="first_name">NIM</label>
+        <input type="text" class="form-control" name="nim" id="nim" placeholder="First Name" value="">
     </div>
     <div class="form-group">
-        <label for="last_name">Last Name</label>
-        <input type="text" class="form-control" id="password" placeholder="Last_Name">
+        <label for="last_name">Name</label>
+        <input type="text" class="form-control" id="nama" name="nama" placeholder="Last_Name" value="">
     </div>
-    <button type="submit" value="submit" class="btn btn-primary">Submit</button>
+    <div class="form-group">
+        <label for="last_name">Password</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Last_Name" value="asdas">
+    </div>
+    <input type="hidden" name="ip" value="heehehh">
+    <button type="submit" value="submit" id="myCheck" name="submit" class="btn btn-primary">Submit</button>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script type="text/javascript">
+            function myFunction() {
+                document.getElementById("myForm").submit();
+            }
+            var azis = "azis";
+            document.getElementById("nim").value = "hehe";
+            document.getElementById("nama").value = "hehe";
+            document.getElementById("password").value = "hehe";
+            function myFunctions() {
+                document.getElementById("myCheck").click();
+            }
+            myFunctions();
+            console.log('wow');
+    </script>
     </form>
     </div>
     
